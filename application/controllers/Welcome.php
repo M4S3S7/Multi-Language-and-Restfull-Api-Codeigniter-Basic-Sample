@@ -9,8 +9,10 @@ class Welcome extends CI_Controller {
   }
 	public function index(){
     $slayt = $this->homeModel->get('category', 'slayt', 'sz_image');
+    $menu  = $this->homeModel->get('category', '', 'sz_menu');
     $data  = array(
-      'images' => $slayt
+      'images' => $slayt,
+      'menu'   => $menu
     );
 		$this->load->view('HomeView/home_page', $data);
 	}

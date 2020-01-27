@@ -9,10 +9,16 @@ $route['default_controller'] = 'welcome';
 
 
 //dashboard pages
-$routue['dashboard']                                        = 'siteController/DashboardController/homePage';
+  //image Action
+$route['dashboard']                                         = 'siteController/DashboardController/homePage';
 $route['dashboard/image/(:any)']                            = 'siteController/DashBoardController/homePage/image/$1';
 $route['dashboard/image/(:any)/(:any)/(:any)']              = 'siteController/DashBoardController/fileController/image/$1/$2';
-
+  //menu Action bu kısmı eklemeyi unutmamam gerekiyor
+$route['dashboard/menu']                                    = 'siteController/DashBoardController/menuController/menu';
+$route['dashboard/menu/(:any)/(:any)']                      = 'siteController/DashBoardController/menuController/menuInsert';
+  //blog page dashboard
+$route['dashboard/blog']                                    = 'siteController/DashBoardController/blogController/blog';
+$route['dashboard/blog/(:any)/(:any)']                      = 'siteController/DashBoardController/blogController/blogInsert';
 //error page
 $route['404_override']                = '';
 $route['translate_uri_dashes']        = FALSE;

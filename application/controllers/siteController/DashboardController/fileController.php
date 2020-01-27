@@ -13,6 +13,9 @@ class fileController extends CI_Controller{
     if($this->uri->segment(3) == 'u'){
       $data = $this->uri->segment(4);//category Name
       $id   = $this->uri->segment(5);//gelen id adı
+      $text = $this->input->post('item_desc');
+      $item = $this->input->post('item_name');
+      $video= $this->input->post('item_video');
       $config["allowed_types"]  = "jpg|gif|png";
       $config["upload_path"]    = "uploads/";
       $file_save_name           = random_string('alnum', 16);
@@ -27,15 +30,28 @@ class fileController extends CI_Controller{
         $dataInsert            =  array(
           'category'           => $data,
           'name'               => $file,
+          'text'               => $text,
+          'item_name'          => $item,
+          'video'              => $video
         );
         $this->dashboardModel->update($id, 'sz_image', $dataInsert);
         redirect(base_url('dashboard/image/'.$this->uri->segment(4)));
       }else {
-        print_r(array('error' => $this->upload->display_errors()));
+        $dataInsert            =  array(
+          'category'           => $data,
+          'text'               => $text,
+          'item_name'          => $item,
+          'video'              => $video
+        );
+        $this->dashboardModel->update($id, 'sz_image', $dataInsert);
+        redirect(base_url('dashboard/image/'.$this->uri->segment(4)));
       }
       // i insert olarak kısalttım
     }elseif ($this->uri->segment(3) == 'i') {
       $data = $this->uri->segment(4);
+      $text = $this->input->post('item_desc');
+      $item = $this->input->post('item_name');
+      $video= $this->input->post('item_video');
       $config["allowed_types"]  = "jpg|gif|png";
       $config["upload_path"]    = "uploads/";
       $file_save_name           = random_string('alnum', 16);
@@ -50,10 +66,13 @@ class fileController extends CI_Controller{
         $dataInsert            =  array(
           'category'           => $data,
           'name'               => $file,
+          'text'               => $text,
+          'item_name'          => $item,
+          'video'              => $video
         );
         $this->dashboardModel->insert('sz_image', $dataInsert);
       }else {
-        redirect(base_url('dashboard/image/'.$rdrct));
+        redirect(base_url('dashboard/image/'.$this->uri->segment(4)));
         print_r(array('error' => $this->upload->display_errors()));
       }
       //delete işleminin yapıldığı
