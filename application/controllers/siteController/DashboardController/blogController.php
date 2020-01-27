@@ -16,6 +16,6 @@ class BlogController extends CI_Controller{
     $this->load->view('DashboardView/blog_page', $dataBlog);
   }
   public function blogInsert(){
-
+    
   }
 }

@@ -16,4 +16,7 @@ class Welcome extends CI_Controller {
     );
 		$this->load->view('HomeView/home_page', $data);
 	}
+  public function blog(){
+    $this->load->view('HomewView/home_page');
+  }
 }
