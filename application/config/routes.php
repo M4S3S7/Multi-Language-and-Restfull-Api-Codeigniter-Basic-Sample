@@ -5,8 +5,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 //home_page
-$route['default_controller'] = 'welcome';
-
+$route['default_controller']                                = 'welcome';
+$route['blog']                                              = 'welcome/blog_list';
+$route['blog/(:any)/(:any)']                                = 'welcome/blog_detail';
 
 //dashboard pages
   //image Action
@@ -19,9 +20,9 @@ $route['dashboard/menu/(:any)/(:any)']                      = 'siteController/Da
   //blog page dashboard
 $route['dashboard/blog']                                    = 'siteController/DashBoardController/blogController/blog';
 $route['dashboard/blog/(:any)/(:any)']                      = 'siteController/DashBoardController/blogController/blogInsert';
-//error page
-$route['404_override']                = '';
-$route['translate_uri_dashes']        = FALSE;
+  //error page
+$route['404_override']                                      = '';
+$route['translate_uri_dashes']                              = FALSE;
 
 
 
