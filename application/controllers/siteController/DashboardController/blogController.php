@@ -9,7 +9,7 @@ class BlogController extends CI_Controller{
 
   }
   public function blog(){
-    $blog = $this->dashboardModel->get('category', '', 'sz_blog');
+    $blog = $this->dashboardModel->get('category', 'blog', 'sz_blog');
     $dataBlog = array(
       'blog'  => $blog,
       'blogCh'  => $blog

@@ -35,4 +35,3 @@ if($tmpusername == $username and $password == $tmppassword) {
         </script>
     ';
 }
-

@@ -15,7 +15,6 @@
   <link rel="shortcut icon" href="/Dashboard/media/favicons/favicon.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/Dashboard/media/favicons/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/Dashboard/media/favicons/apple-touch-icon-180x180.png">
-  <link rel="stylesheet" href="/Dashboard/js/plugins/trum/dist/ui/trumbowyg.min.css">
   <link rel="stylesheet" href="/Dashboard/js/plugins/dropzonejs/dist/dropzone.css">
 
 
@@ -70,7 +69,7 @@
                     </td>
                     <td class="text-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-alt-info" data-toggle="modal" data-target="#modal-extra-<?php echo $blog->id ?>">Delete</button>
+                        <button type="button" class="btn btn-alt-info" data-toggle="modal" data-target="#modal-extra-<?php echo $blog->id ?>">Edit/Delete</button>
                       </button>
                     </div>
                   </td>
@@ -97,16 +96,16 @@
               <div class="block-content">
                 <form class="" action="<?php echo base_url("/dashboard/menu/update/".$blogCh->id); ?>" method="post">
                   <div class="form-group row">
-                    <label class="col-12" for="example-text-input">Change file input</label>
+                    <label class="col-12" for="example-text-input">Blog Name</label>
                     <div class="col-md-12">
                       <input type="text" class="form-control" name="menu_name" value="<?php echo $blogCh->name ?>">
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label class="col-12" for="example-text-input">Custom Page</label>
+                    <label class="col-12" for="example-text-input">Blog description</label>
                     <div class="col-md-12">
-                      <textarea id="js-ckeditor" name="ckeditor">Hello World!</textarea>
-                      <div class="form-text text-muted">Customize Page Details</div>
+                      <textarea class="ckeditor" name="ckeditor">Hello World!</textarea>
+                      <div class="form-text text-muted">Static Page description P.s Privacy and policy, about us ...</div>
                     </div>
                   </div>
                 </div>
@@ -126,102 +125,69 @@
             </div>
           </div>
         </div>
-      <?php endforeach; ?>
-      <div class="modal" id="modal-add" tabindex="-1" role="dialog" aria-labelledby="modal-extra-large" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
-          <div class="modal-content">
-            <div class="block block-themed block-transparent mb-0">
-              <div class="block-header bg-primary-dark">
-                <h3 class="block-title">Blog Page Edit</h3>
-                <div class="block-options">
-                  <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
-                    <i class="si si-close"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="block-content">
-                <form class="" action="<?php echo base_url("/dashboard/blog/i/.x0Xc21z"); ?>" method="post" enctype="multipart/form-data">
-
-                  <div class="form-group row">
-                    <label class="col-12">Menu Name</label>
-                    <div class="col-12">
-                      <div class="custom-file">
-                        <input type="text" class="form-control" name="blog_name" value="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-12" for="example-text-input">Menu description</label>
-                    <div class="col-md-12">
-                      <textarea id="trumtrum" name="ckeditor">Hello World!</textarea>
-                      <div class="form-text text-muted">Static Page description P.s Privacy and policy, about us ...</div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-12">Change Image File</label>
-                    <div class="col-12">
-                      <div class="custom-file">
-                        <input type="file" name="file">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="submit" class="btn btn-alt-success">
-                  <i class="fa fa-check"></i> Saves
+      </div>
+    <?php endforeach; ?>
+    <div class="modal" id="modal-add" tabindex="-1" role="dialog" aria-labelledby="modal-extra-large" aria-hidden="true">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="block block-themed block-transparent mb-0">
+            <div class="block-header bg-primary-dark">
+              <h3 class="block-title">Blog Page Edit</h3>
+              <div class="block-options">
+                <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                  <i class="si si-close"></i>
                 </button>
-              </form>
-              <button type="button" class="btn btn-alt-secondary" data-dismiss="modal">Close</button>
+              </div>
             </div>
+            <div class="block-content">
+              <form class="" action="<?php echo base_url("/dashboard/blog/i/.x0Xc21z"); ?>" method="post" enctype="multipart/form-data">
+
+                <div class="form-group row">
+                  <label class="col-12">Menu Name</label>
+                  <div class="col-12">
+                    <div class="custom-file">
+                      <input type="text" class="form-control" name="blog_name" value="">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-12" for="example-text-input">Blog description</label>
+                  <div class="col-md-12">
+                    <textarea class="ckeditor" name="ckeditor">Hello World!</textarea>
+                    <div class="form-text text-muted">Blog Page description</div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-12">Add Cover Image File</label>
+                  <div class="col-12">
+                    <div class="custom-file">
+                      <input type="file" name="file">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-alt-success">
+                <i class="fa fa-check"></i> Saves
+              </button>
+            </form>
+            <button type="button" class="btn btn-alt-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
-      <?php $this->load->view('Dependencies/dashboard/footer') ?>
-      <!-- END Page Container -->
-      <?php $this->load->view('Dependencies/dashboard/script') ?>
-      <script src="/Dashboard/js/plugins/dropzonejs/dropzone.min.js"></script>
-      <script src="/Dashboard/js/plugins/datatables/jquery.dataTables.min.js"></script>
-      <script src="/Dashboard/js/plugins/trum/dist/trumbowyg.min.js"></script>
-      <script src="/Dashboard/js/plugins/trum/dist/plugins/upload/trumbowyg.upload.min.js"></script>
-      <script src="/Dashboard/js/plugins/trum/dist/plugins/base64/trumbowyg.base64.min.js"></script>
-      <script src="/Dashboard/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
-      <script src="/Dashboard/js/pages/be_tables_datatables.min.js"></script>
-      <script type="text/javascript">
-      $('#trumtrum').trumbowyg({
-        lang: 'en',
-            autogrow: true,
-            removeformatPasted: true,
-            imageWidthModalEdit: true,
-            btnsDef: {
-                // Create a new dropdown
-                image: {
-                    dropdown: ['upload', 'base64'],
-                    ico: 'insertImage'
-                }
-            },
-            btns: [
-                // ['viewHTML'],
-                ['historyUndo', 'historyRedo'],
-                ['formatting'],
-                ['strong', 'em', 'del'],
-                ['link'],
-                ['image'],
-                ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
-                ['unorderedList', 'orderedList'],
-                ['horizontalRule'],
-                ['removeformat'],
-                ['fullscreen']
-            ],
-            plugins: {
-                upload: {
-                    serverPath: '',
-                    fileFieldName: 'image',
-                    urlPropertyName: 'url',
-                }
-            }
-      });
-      </script>
+    </div>
+    <?php $this->load->view('Dependencies/dashboard/footer') ?>
+    <!-- END Page Container -->
+    <?php $this->load->view('Dependencies/dashboard/script') ?>
+    <script src="/Dashboard/js/plugins/dropzonejs/dropzone.min.js"></script>
+    <script src="/Dashboard/js/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="/Dashboard/js/plugins/ckeditor/ckeditor.js" charset="utf-8"></script>
+    <script src="/Dashboard/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="/Dashboard/js/pages/be_tables_datatables.min.js"></script>
+    <script>jQuery(function(){ Codebase.helpers(['summernote', 'ckeditor', 'simplemde']); });</script>
 
-    </body>
-    </html>
+
+
+  </body>
+  </html>
