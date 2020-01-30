@@ -1,6 +1,6 @@
 ﻿/**
- * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.md or https://ckeditor.com/license
+ * @license Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
 /**
@@ -10,13 +10,13 @@
  * If you would like to build CKEditor online again
  * (for example to upgrade), visit one the following links:
  *
- * (1) https://ckeditor.com/cke4/builder
+ * (1) http://ckeditor.com/builder
  *     Visit online builder to build CKEditor from scratch.
  *
- * (2) https://ckeditor.com/cke4/builder/4b511d4b37fe5aa5e004c34bf7998c7b
+ * (2) http://ckeditor.com/builder/8ff7b71bcccc296bcc3a4a5b82942d17
  *     Visit online builder to build CKEditor, starting with the same setup as before.
  *
- * (3) https://ckeditor.com/cke4/builder/download/4b511d4b37fe5aa5e004c34bf7998c7b
+ * (3) http://ckeditor.com/builder/download/8ff7b71bcccc296bcc3a4a5b82942d17
  *     Straight download link to the latest version of CKEditor (Optimized) with the same setup as before.
  *
  * NOTE:
@@ -54,12 +54,10 @@ var CKBUILDER_CONFIG = {
 	plugins : {
 		'a11yhelp' : 1,
 		'about' : 1,
-		'base64image' : 1,
 		'basicstyles' : 1,
 		'blockquote' : 1,
 		'clipboard' : 1,
 		'contextmenu' : 1,
-		'easyimage' : 1,
 		'elementspath' : 1,
 		'enterkey' : 1,
 		'entities' : 1,
@@ -69,19 +67,13 @@ var CKBUILDER_CONFIG = {
 		'horizontalrule' : 1,
 		'htmlwriter' : 1,
 		'image' : 1,
-		'image2' : 1,
-		'imagepaste' : 1,
-		'imageuploader' : 1,
 		'indentlist' : 1,
 		'link' : 1,
 		'list' : 1,
 		'magicline' : 1,
 		'maximize' : 1,
-		'pasteUploadImage' : 1,
-		'pastefromgdocs' : 1,
 		'pastefromword' : 1,
 		'pastetext' : 1,
-		'pastetools' : 1,
 		'removeformat' : 1,
 		'resize' : 1,
 		'scayt' : 1,
@@ -95,11 +87,9 @@ var CKBUILDER_CONFIG = {
 		'tabletools' : 1,
 		'toolbar' : 1,
 		'undo' : 1,
-		'uploadfile' : 1,
 		'uploadimage' : 1,
 		'wsc' : 1,
-		'wysiwygarea' : 1,
-		'youtube' : 1
+		'wysiwygarea' : 1
 	},
 	languages : {
 		'af' : 1,

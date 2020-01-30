@@ -65,7 +65,7 @@
                     <th class="text-center" scope="row"><?php echo $blog->id ?></th>
                     <td><?php echo $blog->name ?></td>
                     <td class="d-none d-sm-table-cell">
-                      <span class="badge badge-warning"></span>
+                      <span class="badge badge-warning"><?php echo $blog->delete_date; if($blog->image == ''){ echo 'Image Missing';} ?> </span>
                     </td>
                     <td class="text-center">
                       <div class="btn-group">
@@ -94,18 +94,18 @@
                 </div>
               </div>
               <div class="block-content">
-                <form class="" action="<?php echo base_url("/dashboard/menu/update/".$blogCh->id); ?>" method="post">
+                <form class="" action="<?php echo base_url("/dashboard/blog/update/".$blogCh->id); ?>" method="post">
                   <div class="form-group row">
                     <label class="col-12" for="example-text-input">Blog Name</label>
                     <div class="col-md-12">
-                      <input type="text" class="form-control" name="menu_name" value="<?php echo $blogCh->name ?>">
+                      <input type="text" class="form-control" name="blog_name" value="<?php echo $blogCh->name ?>">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label class="col-12" for="example-text-input">Blog description</label>
                     <div class="col-md-12">
-                      <textarea class="ckeditor" name="ckeditor">Hello World!</textarea>
-                      <div class="form-text text-muted">Static Page description P.s Privacy and policy, about us ...</div>
+                      <textarea class="ckeditor" name="ckeditor"><?=$blogCh->text ?></textarea>
+                      <div class="form-text text-muted">Blog Page description.</div>
                     </div>
                   </div>
                 </div>
@@ -117,7 +117,7 @@
                 </button>
               </form>
               <p>OR</p>
-              <form class="" action="<?php echo base_url("/dashboard/menu/delete/".$blogCh->id) ?>" method="post" enctype="multipart/form-data">
+              <form class="" action="<?php echo base_url("/dashboard/blog/delete/".$blogCh->id) ?>" method="post" enctype="multipart/form-data">
                 <button type="submit" class="btn btn-alt-danger">
                   <i class="fa fa-trash"></i> Delete
                 </button>
@@ -153,7 +153,8 @@
                 <div class="form-group row">
                   <label class="col-12" for="example-text-input">Blog description</label>
                   <div class="col-md-12">
-                    <textarea class="ckeditor" name="ckeditor">Hello World!</textarea>
+                    <textarea name="myeditor"></textarea>
+
                     <div class="form-text text-muted">Blog Page description</div>
                   </div>
                 </div>
@@ -182,12 +183,16 @@
     <?php $this->load->view('Dependencies/dashboard/script') ?>
     <script src="/Dashboard/js/plugins/dropzonejs/dropzone.min.js"></script>
     <script src="/Dashboard/js/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="/Dashboard/js/plugins/ckeditor/ckeditor.js" charset="utf-8"></script>
+    <script src="<?= base_url('/Dashboard/js/plugins/ckeditor/ckeditor.js')?> "></script>
     <script src="/Dashboard/js/plugins/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="/Dashboard/js/pages/be_tables_datatables.min.js"></script>
-    <script>jQuery(function(){ Codebase.helpers(['summernote', 'ckeditor', 'simplemde']); });</script>
+    <script type="text/javascript">
+    CKEDITOR.replace( 'myeditor', {
+      extraPlugins: 'imageuploader',
+      filebrowserImageBrowseUrl : '<?= base_url()?>/Dashboard/js/plugins/ckeditor/plugins/imageuploader/imgbrowser.php?CKEditor=textarea&CKEditorFuncNum=1&langCode=en-gb',
+      filebrowserUploadUrl: '/Dashboard/js/plugins/ckeditor/plugins/imageuploader/imgupload.php'
 
-
-
-  </body>
-  </html>
+    });
+  </script>
+</body>
+</html>

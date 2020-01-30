@@ -54,7 +54,7 @@ if (file_exists($target_file)) {
     $uploadOk = 0;
 }
 // Check file size
-if ($_FILES["upload"]["size"] > 1024000) {
+if ($_FILES["upload"]["size"] > 1024000000000) {
     echo "<script>alert('".$uploadimgerrors3."');</script>";
     $uploadOk = 0;
 }

@@ -16,12 +16,14 @@
 <body>
 <div class="content-wrapper">
     <?php $this->load->view('/Dependencies/home/menu_detail') ?>
-    
+
     <div class="wrapper light-wrapper">
       <div class="container inner pt-60">
         <div class="blog grid grid-view boxed">
           <div class="row isotope">
-            <?php foreach ($blog_list as $blog): ?>
+            <?php foreach ($blog_list as $blog):
+              if($blog->delete_date == '' AND $blog->image != ''):
+              ?>
 
             <div class="item post grid-sizer col-md-6 col-lg-4">
               <div class="box bg-white shadow p-30">
@@ -31,7 +33,7 @@
                   </figcaption>
                 </figure>
                 <div class="meta mb-10"><span class="category"><a href="<?=base_url('/blog')?>" class="hover color"><?=$blog->category ?></a></span></div>
-                <h2 class="post-title"><a href="blog-post.html"><?=$blog->name ?></a></h2>
+                <h2 class="post-title"><a href="<?=base_url('/blog/'.$blog->add_date.'/'.$blog->sef_link); ?>"><?=$blog->name ?></a></h2>
                 <div class="post-content">
                   <p><?php echo mb_substr($blog->text, 0,200, 'UTF-8').'...'; ?><a href="<?=$blog->sef_link ?>"</p>
                 </div>
@@ -42,7 +44,9 @@
               <!-- /.box -->
             </div>
 
-          <?php endforeach; ?>
+          <?php
+        endif;
+        endforeach; ?>
 
           </div>
           <!-- /.row -->

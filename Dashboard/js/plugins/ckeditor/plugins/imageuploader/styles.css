@@ -38,11 +38,11 @@ body {
     margin-bottom: 2.4%;
     overflow: hidden;
     cursor: pointer;
-
+    
     -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
-
+    
 		transition: all .16s ease-in-out;
     -moz-transition: all .16s ease-in-out;
 		-webkit-transition: all .16s ease-in-out;
@@ -280,10 +280,10 @@ editable:hover {
     margin-top: -16px;
     color: #2C3E50;
     display: none;
-
-    background: #FFFFFF url('img/cd-icon-updates.png') no-repeat center left 12px;
-		background-size: 22px 22px;
-
+    
+    background: #FFFFFF url('img/cd-icon-updates.png') no-repeat center left 12px;	
+		background-size: 22px 22px;		
+    
     -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px rgba(255, 255, 255, 0.25) inset;
     -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px rgba(255, 255, 255, 0.25) inset;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px rgba(255, 255, 255, 0.25) inset;
@@ -345,7 +345,7 @@ editable:hover {
     -webkit-filter: brightness(8);
     filter: brightness(8);
 }
-
+    
 #settingsDiv {
 }
 
@@ -382,10 +382,10 @@ editable:hover {
     margin-bottom: 16px;
     margin-top: -5px;
     color: #2C3E50;
-
-    background: #FFFFFF url('img/cd-icon-warning.png') no-repeat center left 12px;
-		background-size: 22px 22px;
-
+    
+    background: #FFFFFF url('img/cd-icon-warning.png') no-repeat center left 12px;	
+		background-size: 22px 22px;		
+    
     -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px rgba(255, 255, 255, 0.25) inset;
     -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px rgba(255, 255, 255, 0.25) inset;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px rgba(255, 255, 255, 0.25) inset;
@@ -571,7 +571,7 @@ editable:hover {
     height: 100%;
     z-index: 1002;
     cursor: pointer;
-    background: #EEEEEE;
+    background: #EEEEEE;	
 }
 
 .dropzone p {
@@ -583,7 +583,7 @@ editable:hover {
     font-weight: lighter;
     font-family: "Open Sans",sans-serif;
     font-size: 18px;
-
+    
     animation: popdrop 1s infinite;
     -webkit-animation: popdrop 1s infinite;
 }
@@ -601,7 +601,7 @@ editable:hover {
 
 #editbar {
     display: none;
-
+    
     position: fixed;
     top:55px;
     margin: auto;
@@ -614,12 +614,12 @@ editable:hover {
     font-size: 16px;
     color: #F80B6D;
     text-align: left;
-    z-index: 999;
+    z-index: 999;    
     border: solid 1px #E6E7E6;
     border-top: none;
     background-color: #FFF;
     border-radius: 1px;
-
+    
     -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
@@ -631,12 +631,12 @@ editable:hover {
     display: inline-block;
     float: left;
     margin-right: 18px;
-
+    
     max-width: 15%;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-
+    
     transition: all .16s ease-in-out;
     -moz-transition: all .16s ease-in-out;
 		-webkit-transition: all .16s ease-in-out;
@@ -650,8 +650,8 @@ editable:hover {
 
 .editbarIcon {
     -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-
+    filter: grayscale(100%); 
+    
 		transition: all .16s ease-in-out;
     -moz-transition: all .16s ease-in-out;
 		-webkit-transition: all .16s ease-in-out;
@@ -659,8 +659,8 @@ editable:hover {
 
 .editbarIconRight {
     width: 15px;
-    float: right;
-
+    float: right; 
+    
     transition: all .16s ease-in-out;
     -moz-transition: all .16s ease-in-out;
 		-webkit-transition: all .16s ease-in-out;
@@ -701,7 +701,7 @@ editable:hover {
     padding: 0px 8px;
     text-align: center;
     top: 13%;
-
+    
     -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px rgba(255, 255, 255, 0.25) inset;
     -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px rgba(255, 255, 255, 0.25) inset;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.05), 0px 1px 0px rgba(255, 255, 255, 0.25) inset;

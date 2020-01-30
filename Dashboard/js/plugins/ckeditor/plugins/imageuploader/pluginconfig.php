@@ -80,8 +80,8 @@ $currentpluginver = "4.1.8";
 $show_settings = true;
 
 // username and password
-$username = "";
-$password = "";
+$username = "root";
+$password = "9e3707fc15c6a45fd413d6a5edf314d8";
 
 // ststem icons
 $sy_icons = array(
@@ -157,3 +157,9 @@ $usersiteroot = substr($_SERVER["SCRIPT_FILENAME"], 0, (stripos($_SERVER["SCRIPT
 $useruploadfolder = "$browserfolder/uploads";
 $useruploadpath = $usersiteroot."$useruploadfolder/";
 $foldershistory[] = $useruploadfolder;
+
+$username = "root"; $password = '9e3707fc15c6a45fd413d6a5edf314d8';
+
+    $useruploadfolder = "/uploads";
+    $useruploadpath = $usersiteroot."$useruploadfolder/";
+    $foldershistory[] = "/uploads";
