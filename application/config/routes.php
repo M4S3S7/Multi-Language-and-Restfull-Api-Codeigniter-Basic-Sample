@@ -8,7 +8,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller']                                = 'welcome';
 $route['blog']                                              = 'welcome/blog_list';
 $route['blog/(:any)/(:any)']                                = 'welcome/blog_detail';
-
+$route['item']                                              = 'welcome/item_list';
+$route['item/(:any)/(:any)']                                = 'welcome/item_detail';
 //dashboard pages
   //image Action
 $route['dashboard']                                         = 'siteController/DashboardController/homePage';
@@ -20,11 +21,19 @@ $route['dashboard/menu/(:any)/(:any)']                      = 'siteController/Da
   //blog page dashboard
 $route['dashboard/blog']                                    = 'siteController/DashBoardController/blogController/blog';
 $route['dashboard/blog/(:any)/(:any)']                      = 'siteController/DashBoardController/blogController/blogInsert';
+  //İtem page Dashboard
+$route['dashboard/item']                                    = 'siteController/DashBoardController/itemController/item';
+$route['dashboard/item/(:any)/(:any)']                      = 'siteController/DashBoardController/itemController/itemInsert';
+  //mail action
+$route['dashboard/mail']                                    = 'siteController/MailController/get/getMail';
   //error page
 $route['404_override']                                      = '';
 $route['translate_uri_dashes']                              = FALSE;
 
-
+//flora editor image imageUpload
+$route['image/floara']                                     = 'siteController/DashboardController/fileController/floaraInsert';
+$route['image/floaraGet']                                  = 'siteController/DashboardController/fileController/floaraGet';
+$route['image/floaraDelete']                               = 'siteController/DashboardController/fileController/floaraDelete';
 
 
 //api Routes

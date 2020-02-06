@@ -30,4 +30,11 @@ class Welcome extends CI_Controller {
     );
     $this->load->view('HomeView/blog_detail', $data); // daha eklemedim buraya dikkat etmem gerekiyor
   }
+  public function item_list(){
+    $item_list   = $this->homeModel->get('_delete', '', 'sz_item');
+    $data        = array(
+      'item_list'=> $item_list
+    );
+    echo $data;
+  }
 }
